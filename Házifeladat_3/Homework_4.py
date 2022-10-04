@@ -1,7 +1,6 @@
 import math
 def binaris(number):
     remainder = ""
-    j = 0
     while number !=0:
         if number%2==1:
             remainder += "1"
