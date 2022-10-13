@@ -18,7 +18,7 @@ class fejlesztok():
         self.payment=payment
     
     def fizetes(self,pay):
-        if (pay !=10000):
+        if (pay !=""):
             self.payment +=pay
         else:
             self.payment +=10000
@@ -46,7 +46,7 @@ Wage:       {3} HUF\n""".format(self.name,self.rang,self.year,self.payment))
 
 def main():   
     FirstWorker = fejlesztok("Csuka Dávid","","",30000)
-    FirstWorker.fizetes(69000)
+    FirstWorker.fizetes(10000)
     FirstWorker.rangja()
     FirstWorker.kiir()
 if __name__=='__main__':
