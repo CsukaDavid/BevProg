@@ -1,5 +1,5 @@
 class fejlesztok():
-    def __init__(self,name,rang="Junior", year = 0,payment):
+    def __init__(self,name,rang="Junior", year = 0, payment=0):
         self.name=name
         self.rang=rang
         self.year=year
