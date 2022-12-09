@@ -2,11 +2,11 @@ import random
 def main():
     n = 2^1024
     n = str(n)
-    li = []
     osszeg = 0
-    for i in range(len(n)):
-        li.append(n[i])
-    for i in range(len(li)):
+    li=[]
+    for i in range(len(str(n))):
+        li.append(str(n[i]))
+    for i in range(len(li)-1):
         if int(li[i]) > int(li[i+1]):
             osszeg += int(li[i])-int(li[i+1])
         else:

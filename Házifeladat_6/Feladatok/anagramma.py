@@ -28,6 +28,6 @@ def fuggveny(text1,text2):
         print("a második szó az első szó anagrammája")
 
 def main():
-    fuggveny("Clint Eastwood","Old west action")
+    fuggveny("asztal","aszta")
 if __name__=="__main__":
     main()

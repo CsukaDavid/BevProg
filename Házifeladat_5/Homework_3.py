@@ -1,43 +1,21 @@
 # reading the file
-filename='F:\Bevezetés a programozásba\BevProg-1\Házifeladat_5\string1.py'
-with open(filename) as fp:
-    contents=fp.readlines()
 
-# initialize two counter to check mismatch between "(" and ")"
-open_bracket_counter=0
-close_bracket_counter=0 
+def main():
+    filename='F:\BevProg\Házifeladat_5\string1.py'
+    f= open(filename,"r")
+    contents=f.readlines()
+    eredmeny=""
+    for i in range(len(contents)):
+        if contents[i].find("#")>0:
+            pass
+        else:
+            eredmeny+=contents[i]
+    print(eredmeny)
+    f.close()
+    file='F:\BevProg\Házifeladat_5\string1_clear.py'
+    f =open(file,"w")
+    print(eredmeny,file=f)
+    f.close
 
-# whenever an element deleted from the list length of the list will be decreased
-decreasing_counter=0   
-
-for number in range(len(contents)):
-
-    # checking if the line contains "#" or not
-    if "#" in contents[number-decreasing_counter]:
-
-        # delete the line if startswith "#"
-        if contents[number-decreasing_counter].startswith("#"):
-            contents.remove(contents[number-decreasing_counter])
-            decreasing_counter+=1
-
-        # delete the character after the "#"    
-        else:  
-            newline=""  
-            for character in contents[number-decreasing_counter]:
-                if character=="(":
-                    open_bracket_counter+=1
-                    newline+=character
-                elif character==")":
-                    close_bracket_counter+=1
-                    newline+=character
-                elif character=="#" and open_bracket_counter==close_bracket_counter:
-                    break
-                else:
-                    newline+=character
-            contents.remove(contents[number-decreasing_counter])     
-            contents.insert(number-decreasing_counter,newline)   
-
-
-# writing into a new file
-with open('F:\Bevezetés a programozásba\BevProg-1\Házifeladat_5\string1_clean.py',"w") as fp:
-    fp.writelines(contents)
+if __name__=="__main__":
+    main()

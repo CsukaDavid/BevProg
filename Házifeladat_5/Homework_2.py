@@ -1,5 +1,5 @@
 def main():
-    filename='F:\Bevezetés a programozásba\BevProg-1\Házifeladat_5\pivers.txt'
+    filename='F:\BevProg\Házifeladat_5\pivers.txt'
     f = open(filename,'r')
     li =f.readlines()
     szoveg=""
@@ -12,7 +12,7 @@ def main():
             szoveg+=str(len(donelist[i]))
             if len(szoveg)==1:
                 szoveg+="."
-    filename='F:\Bevezetés a programozásba\BevProg-1\Házifeladat_5\piertek.txt'
+    filename='F:\BevProg\Házifeladat_5\piertek.txt'
     f = open(filename,"w")
     print(szoveg,file=f,end="")
 
